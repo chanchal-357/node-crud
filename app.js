@@ -41,12 +41,12 @@ app.post("/addname", (req, res) => {
 //const router = express.Router()
 //router.get('/users',(req,res) => {
 app.get('/users', (req, res) => {
-    User.find(function (err, users) {
+  /*  User.find(function (err, users) {
         if (err)
             res.send(err);
         res.send(users);
-    });
-  /*var pageNo = parseInt(req.query.pageNo)
+    });*/
+  var pageNo = parseInt(req.query.pageNo)
   var size = parseInt(req.query.size)
   var query = {}
   if(pageNo < 0 || pageNo === 0) {
@@ -70,7 +70,7 @@ app.get('/users', (req, res) => {
 		}
 		res.json(response);
 	 });
-	})*/
+ }) // */
 });
 
 app.listen(port, () => {
